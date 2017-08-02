@@ -17,6 +17,8 @@ Run the app:
 
 And finally, go to http://localhost:7676/ in your web browser.
 
+You can also change the default directory used to look for nginx files by editing app/config.js, which by default is set to `/etc/nginx/sites-enabled`.
+
 I would recommend only running this within a local network, as to prevent the entire internet from having the ability to edit your nginx configuration files.
 
 Also, if you decide to use this on a more permanent basis, I would not recommend setting up an nginx reverse proxy for it, because if your nginx breaks while you are editing files, you will lose access to the site and won't be able to fix the problem.  In other words, because this tool manages nginx, don't access it through an nginx reverse proxy.
