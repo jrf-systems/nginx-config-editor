@@ -1,0 +1,1 @@
+module.exports = "/etc/nginx/sites-enabled"

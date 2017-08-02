@@ -1,0 +1,17 @@
+{
+  "name": "nginx-config-editor",
+  "version": "1.0.0",
+  "description": "A web-based tool to edit nginx config files",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jesse Russell",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "pug": "^2.0.0-rc.2",
+    "socket.io": "^2.0.3"
+  }
+}

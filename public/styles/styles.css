@@ -1,0 +1,47 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0px auto;
+  padding: 0px;
+}
+
+#editor {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 20%;
+}
+
+#pane {
+  position: absolute;
+  top: 0;
+  right: 80%;
+  bottom: 0;
+  left: 0;
+  padding: 5px;
+}
+
+#restartnginx {
+  width: 100%;
+}
+
+#checksyntax {
+  width: 100%;
+}
+
+#newconfig {
+  width: 100%;
+}
+
+#saveconfig {
+  width: 100%;
+}
+
+.configItem {
+  cursor: pointer;
+}
+
+.deleteItem {
+  float: right;
+  cursor: pointer;
+}

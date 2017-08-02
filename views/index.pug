@@ -1,0 +1,17 @@
+extends layout.pug
+
+block content
+  div(ng-controller="indexController")
+    #editor
+    #pane
+      h3.uk-text-primary.uk-h3.uk-margin.uk-margin-small-bottom Nginx Config Editor
+      button#newconfig.uk-button.uk-button-danger New Config
+      br
+      input(type="text", placeholder="Config Name...")#name.uk-input.uk-form.uk-form-width-large.uk-margin-small
+      br
+      button#saveconfig.uk-button.uk-button-primary Save Config
+      h4.uk-text-primary.uk-h4.uk-margin.uk-margin-small-top.uk-margin-remove-bottom Tools
+      button#restartnginx.uk-button.uk-margin-small-bottom Restart Nginx
+      button#checksyntax.uk-button Check Syntax
+      h4.uk-text-primary.uk-h4.uk-margin.uk-margin-small-top.uk-margin-remove-bottom Configs
+      ul#configList.uk-list.uk-list-striped
