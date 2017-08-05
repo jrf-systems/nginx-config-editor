@@ -11,9 +11,9 @@ Install the node module dependencies:
 
 `cd nginx-config-editor && npm install`
 
-Run the app:
+Run the app (you must run as sudo to be able to access the nginx directory):
 
-`node server.js`
+`sudo node server.js`
 
 And finally, go to http://localhost:7676/ in your web browser.
 
