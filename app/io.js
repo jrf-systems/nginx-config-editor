@@ -34,6 +34,17 @@ module.exports = function (io) {
       });
     });
 
+    client.on('reload-nginx', function (action) {
+      var command = "nginx -s reload";
+      exec(command, function (err, stdout, stderr) {
+        if (err) {
+          io.emit('error', err.toString());
+        } else {
+          io.emit('reload-success', stdout);
+        }
+      });
+    });
+
     client.on('restart-nginx', function (action) {
       var command = "systemctl restart nginx";
       exec(command, function (err, stdout, stderr) {
