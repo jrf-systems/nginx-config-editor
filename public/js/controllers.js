@@ -39,6 +39,15 @@ ctrl.controller('indexController', function ($scope) {
     });
   });
 
+  socket.on('reload-success', function (stdout) {
+    UIkit.notification({
+      message: "nginx reloaded successfully",
+      status: 'primary',
+      pos: 'top-center',
+      timeout: 5000
+    });
+  });
+
   socket.on('restart-success', function (stdout) {
     UIkit.notification({
       message: "nginx restarted successfully",
@@ -81,6 +90,11 @@ ctrl.controller('indexController', function ($scope) {
   $('#newconfig').click(function() {
     $('#name').val("");
     editor.setValue("");
+  });
+
+  $('#reloadnginx').click(function () {
+    var action = "reload"
+    socket.emit('reload-nginx', action);
   });
 
   $('#restartnginx').click(function () {
