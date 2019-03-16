@@ -4,7 +4,7 @@ var location = require('./config');
 
 module.exports = function (io) {
   io.on('connection', function (client) {
-    console.log("Client connected");
+    console.log(client.request.connection.remoteAddress + " Client connected");
     fs.readdir(location, function(err, files) {
       io.emit('list-configs', files);
     });
@@ -18,7 +18,7 @@ module.exports = function (io) {
 
     client.on('save-config', function (obj) {
       fs.writeFile(location + '/' + obj.file, obj.data, function (err) {
-        console.log("config saved");
+        console.log(client.request.connection.remoteAddress + " config saved - " + obj.file);
         fs.readdir(location, function (err, files) {
           io.emit('list-configs', files);
         });
@@ -27,7 +27,7 @@ module.exports = function (io) {
 
     client.on('delete-config', function (file) {
       fs.unlink(location + '/' + file, function() {
-        console.log("config deleted");
+        console.log(client.request.connection.remoteAddress + " config deleted");
         fs.readdir(location, function (err, files) {
           io.emit('list-configs', files);
         });
@@ -41,6 +41,7 @@ module.exports = function (io) {
           io.emit('error', err.toString());
         } else {
           io.emit('reload-success', stdout);
+          console.log(client.request.connection.remoteAddress + " reload-success");
         }
       });
     });
@@ -52,6 +53,7 @@ module.exports = function (io) {
           io.emit('error', err.toString());
         } else {
           io.emit('restart-success', stdout);
+          console.log(client.request.connection.remoteAddress + " restart-success");
         }
       });
     });
