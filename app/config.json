@@ -1,4 +1,5 @@
 {
     "address" : "localhost",
-    "port" : "7676"
+    "port" : "7676",
+    "config_folder" : "/etc/nginx"
 }

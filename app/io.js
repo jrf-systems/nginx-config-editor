@@ -1,34 +1,34 @@
 var fs = require('fs');
 var exec = require('child_process').exec;
-var location = require('./config');
+var config = require('./config.json');
 
 module.exports = function (io) {
   io.on('connection', function (client) {
     console.log(client.request.connection.remoteAddress + " Client connected");
-    fs.readdir(location, function(err, files) {
+    fs.readdir(config.config_folder, function(err, files) {
       io.emit('list-configs', files);
     });
 
     client.on('show-config', function(file) {
-      fs.readFile(location + '/' + file, 'utf8', function(err, data) {
+      fs.readFile(config.config_folder + '/' + file, 'utf8', function(err, data) {
         var obj = {'file': file, 'data': data};
         io.emit('show-config', obj);
       });
     });
 
     client.on('save-config', function (obj) {
-      fs.writeFile(location + '/' + obj.file, obj.data, function (err) {
+      fs.writeFile(config.config_folder + '/' + obj.file, obj.data, function (err) {
         console.log(client.request.connection.remoteAddress + " config saved - " + obj.file);
-        fs.readdir(location, function (err, files) {
+        fs.readdir(config.config_folder, function (err, files) {
           io.emit('list-configs', files);
         });
       });
     });
 
     client.on('delete-config', function (file) {
-      fs.unlink(location + '/' + file, function() {
+      fs.unlink(config.config_folder + '/' + file, function() {
         console.log(client.request.connection.remoteAddress + " config deleted");
-        fs.readdir(location, function (err, files) {
+        fs.readdir(config.config_folder, function (err, files) {
           io.emit('list-configs', files);
         });
       });
