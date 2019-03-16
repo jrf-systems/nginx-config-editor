@@ -4,12 +4,12 @@ var app = express();
 var http = require('http');
 var bodyParser = require('body-parser');
 
-// Set server port
-var port = process.env.PORT || 7676;
+// load config file
+var config = require('./app/config.json');
 
 // Create server
-var server = http.createServer(app).listen(port);
-console.log("Server running on http://localhost:" + port);
+var server = http.createServer(app).listen(config.port, config.address);
+console.log("Server running on http://" + config.address + ":" + config.port);
 
 // Require and configure socket.io
 var io = require('socket.io')(server);
