@@ -1,6 +1,9 @@
 ## Nginx Config Editor
 This is a simple web-based tool to edit nginx configuration files.  With it you can remotely edit configuration files, create new configuration files, check the files for syntax errors, as well as restart the nginx service.
 
+### 3/27/19 Update ###
+Thanks to [se](https://github.com/se) and [KristijanL](https://github.com/KristijanL) for there additions.  Also this readme needs to be updated.  I will do it on the weekend.
+
 To run this this project, you must have Node.js installed, along with npm, the Node.js package manager.
 
 Clone the project:
