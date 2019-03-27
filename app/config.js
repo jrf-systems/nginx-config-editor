@@ -1,1 +1,0 @@
-module.exports = process.env.CONFIG_FOLDER || "/etc/nginx/sites-enabled"
