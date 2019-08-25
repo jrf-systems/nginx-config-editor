@@ -2,6 +2,7 @@ var fs = require('fs');
 var exec = require('child_process').exec;
 var configpath = __dirname + '/config.json'
 var config = require(configpath);
+var path = require('path');
 
 var walk    = require('walk');
 global.files   = [];
@@ -16,8 +17,8 @@ function listFiles()
 	options = {
 		listeners: {
 			file: function(root, stat, next) {
-				var tmp = root + '/' + stat.name; 
-				global.files.push(tmp.replace(config.config_folder, ''));
+				var tmp = path.join(root, stat.name); 
+				global.files.push(tmp.replace(config.config_folder, '').replace('/',''));
 				next();
 			}
 		}
@@ -34,7 +35,7 @@ module.exports = function (io) {
     io.emit('list-configs', files);
 
     client.on('show-config', function(file) {
-      fs.readFile(config.config_folder + file, 'utf8', function(err, data) {
+      fs.readFile(path.join(config.config_folder, file), 'utf8', function(err, data) {
         var obj = {'file': file, 'data': data};
         io.emit('show-config', obj);
       });
@@ -47,7 +48,7 @@ module.exports = function (io) {
         filename = configpath
       }
       else {
-        filename = config.config_folder + obj.file
+        filename = path.join(config.config_folder, obj.file);
       }
       fs.writeFile(filename, obj.data, function (err) {
         console.log(client.request.connection.remoteAddress + " config saved - " + obj.file);
