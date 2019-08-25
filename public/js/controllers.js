@@ -29,6 +29,11 @@ ctrl.controller('indexController', function ($scope) {
     editor.setValue(obj.data);
     $("#name").val(obj.file);
   });
+  
+  socket.on('load-config', function(obj) {
+    editor.setValue(obj.data);
+    $("#name").val(obj.file);
+  });
 
   socket.on('error', function (err) {
     UIkit.notification({
@@ -105,5 +110,10 @@ ctrl.controller('indexController', function ($scope) {
   $('#checksyntax').click(function () {
     var action = "check"
     socket.emit('check-syntax', action);
+  });
+
+  $('#loadconfig').click(function () {
+    var action = "config"
+    socket.emit('load-config', action);
   });
 });

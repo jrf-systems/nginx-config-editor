@@ -21,7 +21,7 @@ body {
   padding: 5px;
 }
 
-#restartnginx, #checksyntax, #reloadnginx, #saveconfig, #newconfig{
+#restartnginx, #checksyntax, #reloadnginx, #saveconfig, #newconfig, #loadconfig{
   width: 100%;
 }
 
