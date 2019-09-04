@@ -9,11 +9,11 @@ Edit app config:
 
 ### 9/4/19 Update ###
 - I recently finished pushing some commits that addressed a couple issues raised
-- I added an edit config button. This just loads the `config.json` for Nginx Config Editor, and changes take place in real time
+- I added an edit config button. This just loads the config.json for Nginx Config Editor, and changes take place in real time
 - I fixed a few bugs
 
 ### 3/27/19 Update ###
-Thank you [se](https://github.com/se) and [KristijanL](https://github.com/KristijanL) for their additions.
+Thank you [se](https://github.com/se) and [KristijanL](https://github.com/KristijanL) for your contributions to the project.
 
 ### Run this Project ###
 To run this this project, you must have Node.js installed, along with `npm`, the Node.js package manager.
