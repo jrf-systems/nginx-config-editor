@@ -1,6 +1,12 @@
 ## Nginx Config Editor
 This is a simple web-based tool to edit nginx configuration files.  With it you can remotely edit configuration files, create new configuration files, check the files for syntax errors, as well as restart the nginx service.
 
+### Screenshots ###
+Fullscreen App Screenshot:
+![Nginx Config Editor](https://github.com/JacFearsome/nginx-config-editor/blob/master/images/nginxconfigeditor.png)
+New Edit App Config Button:
+![Edit App Config](https://github.com/JacFearsome/nginx-config-editor/blob/master/images/editappconfig.png)
+
 ### 3/27/19 Update ###
 Thanks to [se](https://github.com/se) and [KristijanL](https://github.com/KristijanL) for their additions.
 
