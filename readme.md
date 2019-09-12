@@ -9,7 +9,7 @@ Edit app config:
 
 ### 9/4/19 Update ###
 - I recently finished pushing some commits that addressed a couple issues raised
-- I added an edit config button. This just loads the config.json for Nginx Config Editor, and changes take place in real time
+- I added an edit config button. This just loads the config.json for Nginx Config Editor
 - I fixed a few bugs
 
 ### 3/27/19 Update ###
