@@ -3,9 +3,9 @@ This is a simple web-based tool to edit nginx configuration files.  With it you 
 
 ### Screenshots ###
 Fullscreen:
-![Nginx Config Editor](https://github.com/JacFearsome/nginx-config-editor/blob/master/images/nginxconfigeditor.png)
+![Nginx Config Editor](https://raw.githubusercontent.com/JacFearsome/nginx-config-editor/master/images/nginxconfigeditor.png)
 Edit app config:
-![Edit App Config](https://github.com/JacFearsome/nginx-config-editor/blob/master/images/editappconfig.png)
+![Edit App Config](https://raw.githubusercontent.com/JacFearsome/nginx-config-editor/master/images/editappconfig.png)
 
 ### 9/4/19 Update ###
 - I recently finished pushing some commits that addressed a couple issues raised
