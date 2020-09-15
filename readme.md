@@ -8,6 +8,7 @@ Edit app config:
 ![Edit App Config](https://github.com/JacFearsome/nginx-config-editor/blob/master/images/editappconfig.png)
 
 ### 8/31/20 Update ###
+Thank you [wuliupo](https://github.com/wuliupo) for this update!
 - remove thirdparty libs
 - use dynamic config: `NGINX=/Applications/MAMP/Library/sbin/nginx CONFIG=/data/vhost node server.js`
 
