@@ -7,7 +7,7 @@ Fullscreen:
 Edit app config:
 ![Edit App Config](https://github.com/JacFearsome/nginx-config-editor/blob/master/images/editappconfig.png)
 
-### 31/8/20 Update ###
+### 8/31/20 Update ###
 - remove thirdparty libs
 - use dynamic config: `NGINX=/Applications/MAMP/Library/sbin/nginx CONFIG=/data/vhost node server.js`
 
