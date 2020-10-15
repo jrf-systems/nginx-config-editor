@@ -4,7 +4,7 @@ WORKDIR /usr/src/nginx-config-editor
 COPY package.json /usr/src/nginx-config-editor/
 RUN apt-get update
 RUN apt-get install -y nodejs
-RUN apt-get install npm
+RUN apt-get install -y npm
 RUN npm install
 COPY . /usr/src/nginx-config-editor
 EXPOSE 7676
